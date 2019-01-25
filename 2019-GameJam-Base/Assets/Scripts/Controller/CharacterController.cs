@@ -10,6 +10,8 @@ public class CharacterController : MonoBehaviour
 
     public float MoveSpeed;
 
+    public float RotationSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,8 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
         GetInput();
-        Move();
         Rotate();
+        Move();
         
     }
 
@@ -33,7 +35,11 @@ public class CharacterController : MonoBehaviour
     void Rotate()
     { 
         Debug.Log("TODO");
-        transform.LookAt(transform.position + Constants.InputToMotionFunction(playerInput) );
+        if (playerInput.magnitude > 0.2f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(Constants.InputToMotionFunction(playerInput));
+            transform.rotation = (Quaternion.RotateTowards(transform.rotation, targetRot, RotationSpeed) );
+        }
 //        transform.rotate;
 //        Mathf.Atan2()
       
@@ -42,6 +48,6 @@ public class CharacterController : MonoBehaviour
     void Move()
     {
         
-        transform.Translate(Constants.InputToMotionFunction(playerInput) * MoveSpeed, Space.World);
+        transform.Translate(transform.forward * MoveSpeed * playerInput.magnitude, Space.World);
     }
 }

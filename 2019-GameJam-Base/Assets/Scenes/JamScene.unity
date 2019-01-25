@@ -2247,6 +2247,7 @@ MonoBehaviour:
   targetRotation: {x: 0, y: 0, z: 0, w: 0}
   playerInput: {x: 0, y: 0}
   MoveSpeed: 0.3
+  RotationSpeed: 25
 --- !u!1001 &1919166026
 PrefabInstance:
   m_ObjectHideFlags: 0
