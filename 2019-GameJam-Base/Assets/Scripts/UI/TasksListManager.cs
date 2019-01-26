@@ -11,8 +11,6 @@ public class TasksListManager : MonoBehaviour
 
     public void OnNewTaskStarted(LevelTask startedTask)
     {
-        Debug.Log(startedTask.interactionToBeDone + " " + startedTask.conditionMessage);
-
         TaskItem item =
             GameObject.Instantiate(taskItemPrefab.gameObject, Vector3.zero, Quaternion.identity, taskItemsContainer).GetComponent<TaskItem>();
         item.Populate(startedTask);
@@ -22,6 +20,12 @@ public class TasksListManager : MonoBehaviour
 
     public void OnTaskCompleted(LevelTask completedTask)
     {
+        if (startedTasks.ContainsKey(completedTask.interactionToBeDone))
+        {
+            TaskItem task = startedTasks[completedTask.interactionToBeDone];
+            startedTasks.Remove(completedTask.interactionToBeDone);
 
+            Destroy(task.gameObject);
+        }
     }
 }
