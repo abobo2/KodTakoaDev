@@ -211,9 +211,9 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 0
+    value: 3
   toneCurveToeStrength:
-    overrideState: 0
+    overrideState: 1
     value: 0
   toneCurveToeLength:
     overrideState: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 45
+    value: 38
   tint:
     overrideState: 0
     value: 0
@@ -257,7 +257,7 @@ MonoBehaviour:
     value: 0
   postExposure:
     overrideState: 1
-    value: 0.11
+    value: -0.1
   contrast:
     overrideState: 0
     value: -52
