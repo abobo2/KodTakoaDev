@@ -530,7 +530,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtTimer: {fileID: 4812288369090878847}
-  energiBar: {fileID: 78766933484219549}
+  energyBar: {fileID: 78766933484219549}
+  energyBarImage: {fileID: 671761196632840507}
   tasksManager: {fileID: 6008676813847142156}
 --- !u!1 &3242693841446224969
 GameObject:
@@ -1591,7 +1592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.67058825}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

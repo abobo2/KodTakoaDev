@@ -6,4 +6,14 @@ public class TasksListManager : MonoBehaviour
 {
     public TaskItem[] tasks;
 
+
+    public void OnNewTaskStarted(LevelTask startedTask)
+    {
+
+    }
+
+    public void OnTaskCompleted(LevelTask completedTask)
+    {
+
+    }
 }
