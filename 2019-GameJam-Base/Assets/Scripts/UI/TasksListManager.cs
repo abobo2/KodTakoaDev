@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TasksListManager : MonoBehaviour
 {
+    public List<Sprite> icons;
     public RectTransform taskItemsContainer;
     public TaskItem taskItemPrefab;
 
@@ -13,7 +14,7 @@ public class TasksListManager : MonoBehaviour
     {
         TaskItem item =
             GameObject.Instantiate(taskItemPrefab.gameObject, Vector3.zero, Quaternion.identity, taskItemsContainer).GetComponent<TaskItem>();
-        item.Populate(startedTask);
+        item.Populate(startedTask, icons[(int)startedTask.interactionToBeDone]);
 
         startedTasks.Add(startedTask.interactionToBeDone, item);
     }

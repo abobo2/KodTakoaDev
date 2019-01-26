@@ -7,9 +7,13 @@ public class TaskItem : MonoBehaviour
 
     public Text txtTask;
     public Slider progressSlider;
-
-    public void Populate(LevelTask task)
+    public Image image;
+    
+    public void Populate(LevelTask task, Sprite sprite)
     {
         txtTask.text = task.conditionMessage;
+        image.sprite = sprite;
     }
+    
+    
 }

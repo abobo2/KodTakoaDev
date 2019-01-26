@@ -91,10 +91,10 @@ public class GameEventsManager
 
 public enum Interactable
 {
-    None,
-    Oven,
-    TV,
-    Baniza,
-    Sarmi,
-    Lyuteniza
+    None = 0,
+    Oven = 1,
+    TV = 2,
+    Baniza = 3,
+    Sarmi = 4,
+    Lyuteniza = 5
 }

@@ -522,6 +522,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85d74d778254e244ea0b9242137c17b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icons:
+  - {fileID: 21300000, guid: 0e1ec77f43ef0f844b8753fb4829b2d5, type: 3}
+  - {fileID: 21300000, guid: ed1ba7b21355bba45bfdc729bdaae9b1, type: 3}
+  - {fileID: 21300000, guid: ae73544280f9b7741ad217bcc433e27f, type: 3}
+  - {fileID: 21300000, guid: 71cb5a85b42241d42a8b9ca94c73970a, type: 3}
+  - {fileID: 21300000, guid: 16ad81518074a2a479718b5670c407c1, type: 3}
+  - {fileID: 21300000, guid: 35fb5dcd0a0d2e94f92365fd147bec3d, type: 3}
   taskItemsContainer: {fileID: 833444475764609308}
   taskItemPrefab: {fileID: 5836728670707611661, guid: 9fdde3bea57c25e4b81d2c2104695646,
     type: 3}
@@ -602,6 +609,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3217765398081504607}
     m_Modifications:
+    - target: {fileID: 7126166548448204218, guid: b9c1651b5b0df6140b947924fe5c8efc,
+        type: 3}
+      propertyPath: m_Name
+      value: EnergyBar
+      objectReference: {fileID: 0}
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -706,11 +718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7126166548448204218, guid: b9c1651b5b0df6140b947924fe5c8efc,
-        type: 3}
-      propertyPath: m_Name
-      value: EnergyBar
       objectReference: {fileID: 0}
     - target: {fileID: 7192772661077219067, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
