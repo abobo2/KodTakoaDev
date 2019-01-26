@@ -80,11 +80,13 @@ public class CharacterController : MonoBehaviour
 				{
 					closestInteractable.UnmarkClosest();
 				}
+				Debug.Log("Marking interactable");
 				closestInteractable = closest;
 				closestInteractable.MarkClosest();
 			}
 		}
-		else
+
+		if (closest == null )
 		{
 			if (closestInteractable != null)
 			{
