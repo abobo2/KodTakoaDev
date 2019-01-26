@@ -5,7 +5,9 @@ using System;
 
 public class ServiceLocator : MonoBehaviour
 {
-    public ServiceLocator instance;
+    public static ServiceLocator instance;
+
+    public GuiManager guiManager;
 
     private Kernel kernel;
 
@@ -20,11 +22,12 @@ public class ServiceLocator : MonoBehaviour
             return;
         }
 
-
         kernel = new Kernel();
 
         kernel.Add<GameState>(new GameState());
         kernel.Add<GameEventsManager>(new GameEventsManager());
+
+        kernel.Add<GuiManager>(guiManager);
     }
 
     private void Start()
