@@ -12,6 +12,8 @@ public class GuiManager : MonoBehaviour, IInitiatable
     public Slider energyBar;
     public Image energyBarImage;
 
+    public Animator newLevelTextAnimator;
+
     public TasksListManager tasksManager;
 
     private GameState data;
