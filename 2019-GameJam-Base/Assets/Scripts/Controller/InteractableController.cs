@@ -14,6 +14,7 @@ public class InteractableController : MonoBehaviour
 
 	public bool IsRepeatable;
 
+    public MirzaBeig.ParticleSystems.ParticleSystems interactionParticles;
     public AudioSource interactionSound;
 
 	public float InteractionCooldown;
@@ -71,6 +72,12 @@ public class InteractableController : MonoBehaviour
                 interactionSound.Play();
             }
 
+            if (interactionParticles != null)
+            {
+                interactionParticles.gameObject.SetActive(true);
+                interactionParticles.play();
+            }
+
             isInteracting = true;
             OnInteractionBegin.Invoke(this);
         }
@@ -88,6 +95,12 @@ public class InteractableController : MonoBehaviour
         if (interactionSound != null)
         {
             interactionSound.Stop();
+        }
+
+        if (interactionParticles != null)
+        {
+            interactionParticles.stop();
+            interactionParticles.gameObject.SetActive(false);
         }
 
         isInteracting = false;
@@ -120,6 +133,12 @@ public class InteractableController : MonoBehaviour
         if (interactionSound != null)
         {
             interactionSound.Stop();
+        }
+
+        if (interactionParticles != null)
+        {
+            interactionParticles.stop();
+            interactionParticles.gameObject.SetActive(false);
         }
 
         isInteracting = false;
