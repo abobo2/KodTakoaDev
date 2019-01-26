@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour, IInitiatable
 
     private Interactable expectedInteractable;
 
+    private bool isGameRunning;
+
     public void Initiate()
     {
         gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
@@ -27,22 +29,53 @@ public class GameManager : MonoBehaviour, IInitiatable
 
         gameEventsManager.ObserveInteractions().Subscribe(interaction => 
         {
+            if (!isGameRunning)
+            {
+                return;
+            }
+
             if (currentTask.interactionToBeDone == interaction)
             {
                 CurrentTaskCompleted();
+            }
+        });
+
+        gameState.energy.Subscribe(en =>
+        {
+            if (en <= 0)
+            {
+                LevelFailed();
             }
         });
     }
 
     public void Start()
     {
+        PrepareStartOfGame();
         StarGame();
+    }
+
+    private void PrepareStartOfGame()
+    {
+        gameState.energy.Value = 100;
+    }
+
+    private IEnumerator LooseEnergyOverTime()
+    {
+        while (gameState.energy.Value > 0)
+        {
+            yield return new WaitForSeconds(1f);
+
+            gameState.energy.Value -= 1;
+        }
     }
 
     public void StarGame()
     {
+        isGameRunning = true;
         currentLevelIndex = -1;
 
+        StartCoroutine(LooseEnergyOverTime());
         LoadNextLevel();
     }
 
@@ -104,6 +137,7 @@ public class GameManager : MonoBehaviour, IInitiatable
 
     private void LevelFailed()
     {
+        isGameRunning = false;
         gameEventsManager.InvokeLevelFailed(currentLevel);
         Debug.Log("Level failed !");
     }
