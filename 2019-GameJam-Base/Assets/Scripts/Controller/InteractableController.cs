@@ -14,6 +14,8 @@ public class InteractableController : MonoBehaviour
 
 	public bool IsRepeatable;
 
+    public AudioSource interactionSound;
+
 	public float InteractionCooldown;
 
 	public Interactable InteractionType;
@@ -60,6 +62,11 @@ public class InteractableController : MonoBehaviour
     {
         if(!isInteracting && CanInteract)
         {
+            if (interactionSound != null)
+            {
+                interactionSound.Play();
+            }
+
             isInteracting = true;
             OnInteractionBegin.Invoke(this);
         }
@@ -73,7 +80,12 @@ public class InteractableController : MonoBehaviour
 	}
 
     private void CompleteInteraction()
-    { 
+    {
+        if (interactionSound != null)
+        {
+            interactionSound.Stop();
+        }
+
         isInteracting = false;
         currentInteractionTime = 0;
         CanInteract = false;
@@ -83,6 +95,11 @@ public class InteractableController : MonoBehaviour
 
     public void EndInteraction()
     {
+        if (interactionSound != null)
+        {
+            interactionSound.Stop();
+        }
+
         isInteracting = false;
         OnInteractionEnd.Invoke();
 
