@@ -2,13 +2,13 @@
 using System.Linq;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class CharacterController : MonoBehaviour, IInitiatable
 {
     public Quaternion targetRotation;
 
     public Vector2 playerInput;
 
-    public float MoveSpeed;
+  //  public float MoveSpeed;
 
     public float RotationSpeed;
 
@@ -20,6 +20,14 @@ public class CharacterController : MonoBehaviour
 
 	private InteractableController currentInteractable;
 	private InteractableController closestInteractable;
+
+    private GameState gameState; 
+
+    public void Initiate()
+    {
+        gameState = ServiceLocator.instance.GetInstanceOfType<GameState>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -151,7 +159,7 @@ public class CharacterController : MonoBehaviour
     {
         if (playerInput.magnitude > 0.2f)
         {
-            transform.Translate(transform.forward * MoveSpeed * playerInput.magnitude, Space.World);
+            transform.Translate(transform.forward * gameState.playerSpeed.Value * playerInput.magnitude, Space.World);
         }
     }
 }

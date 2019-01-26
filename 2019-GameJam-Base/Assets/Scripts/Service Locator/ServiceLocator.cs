@@ -30,6 +30,9 @@ public class ServiceLocator : MonoBehaviour
 
         kernel.Add<GuiManager>(guiManager);
         kernel.Add<GameManager>(Instantiate(gameManager));
+
+        CharacterController characterController = FindObjectOfType<CharacterController>();
+        kernel.Add<CharacterController>(characterController);
     }
 
     private void Start()

@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   time: 120
-  tasks:
-  - conditionMessage: Cook something
-    interactionToBeDone: 1
-  - conditionMessage: Cook one more thing
-    interactionToBeDone: 1
+  taskClusters:
+  - tasks:
+    - conditionMessage: Cond 1
+      interactionToBeDone: 1
+  - tasks:
+    - conditionMessage: Cond 2
+      interactionToBeDone: 2

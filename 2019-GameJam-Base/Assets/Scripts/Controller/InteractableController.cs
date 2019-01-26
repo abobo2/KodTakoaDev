@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using UniRx;
 
 [System.Serializable]
 public class InteractableEvent : UnityEvent<InteractableController> {  }
 
 public class InteractableController : MonoBehaviour
 {
+    public Image imgArrow;
+
     public float InteractionTime = 1.5f;
 
 	public bool IsRepeatable;
@@ -88,6 +92,22 @@ public class InteractableController : MonoBehaviour
     public void Start()
     {
         gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
+
+        gameEventsManager.ObserveLevelTaskStarted().Subscribe(t =>
+        {
+            if (InteractionType == t.interactionToBeDone)
+            {
+                imgArrow.gameObject.SetActive(true);
+            }
+        }).AddTo(this);
+
+        gameEventsManager.ObserveLevelTaskCompleted().Subscribe(t =>
+        {
+            if (InteractionType == t.interactionToBeDone)
+            {
+                imgArrow.gameObject.SetActive(false);
+            }
+        }).AddTo(this);
 
         CanInteract = true;
         isInteracting= false;

@@ -9,10 +9,14 @@ public class GameState
     public ReactiveProperty<int> timer;
     public int maxEnergy;
 
+    public ReactiveProperty<float> playerSpeed;
+
     public GameState()
     {
         energy = new ReactiveProperty<int>();
         timer = new ReactiveProperty<int>();
         maxEnergy = 100;
+
+        playerSpeed = new ReactiveProperty<float>();
     }
 }

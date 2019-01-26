@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
+using System.Linq;
 
-public class GameManager : MonoBehaviour, IInitiatable
+public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 {
+    private static int EnergyThatTvGives = 25;
+    private static float PlayerPlayerStartingSpeed = 0.3f;
+
     public Level[] levels;
 
     private int currentLevelIndex;
-    private Level currentLevel;
+    private int currentTaskClusterIndex;
 
-    private int currentTaskIndex;
-    private LevelTask currentTask;
+    private List<LevelTask> currentTasksToDo;
 
     private Coroutine timerCoroutine;
 
@@ -34,14 +37,16 @@ public class GameManager : MonoBehaviour, IInitiatable
                 return;
             }
 
-            if (currentTask.interactionToBeDone == interaction)
-            {
-                CurrentTaskCompleted();
-            }
+            HandleInteraction(interaction);
         });
 
         gameState.energy.Subscribe(en =>
         {
+            if (!isGameRunning)
+            {
+                return;
+            }
+
             if (en <= 0)
             {
                 LevelFailed();
@@ -52,12 +57,17 @@ public class GameManager : MonoBehaviour, IInitiatable
     public void Start()
     {
         PrepareStartOfGame();
+    }
+
+    public void LateInitiate()
+    {
         StarGame();
     }
 
     private void PrepareStartOfGame()
     {
         gameState.energy.Value = 100;
+        gameState.playerSpeed.Value = PlayerPlayerStartingSpeed;
     }
 
     private IEnumerator LooseEnergyOverTime()
@@ -66,7 +76,10 @@ public class GameManager : MonoBehaviour, IInitiatable
         {
             yield return new WaitForSeconds(1f);
 
-            gameState.energy.Value -= 1;
+            if (isGameRunning)
+            {
+                gameState.energy.Value -= 1;
+            }
         }
     }
 
@@ -82,47 +95,57 @@ public class GameManager : MonoBehaviour, IInitiatable
     private void LoadNextLevel()
     {
         currentLevelIndex++;
-        currentLevel = levels[currentLevelIndex];
 
-        gameEventsManager.InvokeLevelStarted(currentLevel);
-        StartLevel(currentLevel);
+        gameEventsManager.InvokeLevelStarted(levels[currentLevelIndex]);
+        StartLevel(levels[currentLevelIndex]);
     }
 
     private void StartLevel(Level lvl)
     {
-        Debug.Log("Starting level: " + currentLevel.level);
+        currentTaskClusterIndex = -1;
 
-        currentTaskIndex = -1;
+        Debug.Log("Starting level: " + lvl.level);
 
         timerCoroutine = StartCoroutine(StartTimer());
-        LoadNextTask();
+        LoadNextTaskCluster();
     }
 
-    private void LoadNextTask()
+    private void LoadNextTaskCluster()
     {
-        if (!PrepareNextTask())
+        currentTaskClusterIndex++;
+
+        if (currentTaskClusterIndex >= levels[currentLevelIndex].taskClusters.Length || levels[currentLevelIndex].taskClusters.Length == 0)
         {
             LevelComplete();
             return;
         }
 
-        Debug.Log("Started task: " + currentTask.conditionMessage);
-        Debug.Log("Interaction Required: " + currentTask.interactionToBeDone);
-        gameEventsManager.InvokeLevelTaskStarted(currentTask);
-        // wait for completion
+        currentTasksToDo = new List<LevelTask>();
+        foreach (var task in levels[currentLevelIndex].taskClusters[currentTaskClusterIndex].tasks)
+        {
+            Debug.Log("Started task: " + task.conditionMessage);
+            Debug.Log("Interaction Required: " + task.interactionToBeDone);
+            gameEventsManager.InvokeLevelTaskStarted(task);
+
+            currentTasksToDo.Add(task);
+        }
     }
 
-    private void CurrentTaskCompleted()
+    private void TaskCompleted(LevelTask task)
     {
-        gameEventsManager.InvokeLevelTaskCompleted(currentTask);
+        gameEventsManager.InvokeLevelTaskCompleted(task);
+        currentTasksToDo.Remove(task);
 
-        Debug.Log("Completed task: " + currentTask.conditionMessage);
-        LoadNextTask();
+        Debug.Log("Completed task: " + task.conditionMessage);
+        if (currentTasksToDo.Count <= 0)
+        {
+            LoadNextTaskCluster();
+        }
     }
 
     public IEnumerator StartTimer()
     {
-        gameState.timer.Value = currentLevel.time;
+        gameState.timer.Value = levels[currentLevelIndex].time;
 
         while (gameState.timer.Value >= 0)
         {
@@ -138,13 +161,13 @@ public class GameManager : MonoBehaviour, IInitiatable
     private void LevelFailed()
     {
         isGameRunning = false;
-        gameEventsManager.InvokeLevelFailed(currentLevel);
+        gameEventsManager.InvokeLevelFailed(levels[currentLevelIndex]);
         Debug.Log("Level failed !");
     }
 
     private void LevelComplete()
     {
-        gameEventsManager.InvokeLevelCompleted(currentLevel);
+        gameEventsManager.InvokeLevelCompleted(levels[currentLevelIndex]);
 
         StopCoroutine(timerCoroutine);
 
@@ -157,18 +180,40 @@ public class GameManager : MonoBehaviour, IInitiatable
     {
         StopAllCoroutines();
     }
-
+    /*
     public bool PrepareNextTask()
     {
         currentTaskIndex++;
-        if (currentTaskIndex < currentLevel.tasks.Length)
+        if (currentTaskIndex < currentLevel.taskClusters.Length)
         {
-            currentTask = currentLevel.tasks[currentTaskIndex];
+          //  currentTask = currentLevel.taskClusters[currentTaskIndex];
             return true;
         }
         else
         {
             return false;
+        }
+    }*/
+
+    private void HandleInteraction(Interactable interactionMade)
+    {
+        var taskFromToDo = currentTasksToDo.Find(e => e.interactionToBeDone == interactionMade);
+
+        if (taskFromToDo != null)
+        {
+            TaskCompleted(taskFromToDo);
+        }
+        
+        if (interactionMade == Interactable.TV)
+        {
+            if (gameState.energy.Value + EnergyThatTvGives > gameState.maxEnergy)
+            {
+                gameState.energy.Value = gameState.maxEnergy;
+            }
+            else
+            {
+                gameState.energy.Value += EnergyThatTvGives;
+            }
         }
     }
 }

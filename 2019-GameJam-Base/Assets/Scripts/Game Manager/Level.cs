@@ -7,5 +7,5 @@ public class Level : ScriptableObject
 {
     public int level;
     public int time;
-    public LevelTask[] tasks;
+    public LevelTasksCluster[] taskClusters;
 }
