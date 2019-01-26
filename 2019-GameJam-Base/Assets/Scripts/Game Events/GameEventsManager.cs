@@ -93,8 +93,8 @@ public enum Interactable
 {
     None,
     Oven,
-    Door,
-    Tv,
-    Phone,
-    Window
+    TV,
+    Baniza,
+    Sarmi,
+    Lyuteniza
 }
