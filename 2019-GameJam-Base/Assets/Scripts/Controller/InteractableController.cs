@@ -20,6 +20,10 @@ public class InteractableController : MonoBehaviour
 
     public UnityEvent OnInteractionCooldownReset;
 
+	public UnityEvent OnClosestMarked;
+
+	public UnityEvent OnClosestUnmarked;
+
     public InteractableEvent OnInteractionBegin;
 
     
@@ -27,7 +31,7 @@ public class InteractableController : MonoBehaviour
     
     private bool isInteracting;
 
-    private bool canInteract;
+    public bool CanInteract;
 
 	
     public float InteractionCompleteness => currentInteractionTime / InteractionTime;
@@ -37,9 +41,19 @@ public class InteractableController : MonoBehaviour
 	public float CooldownAbsolute => InteractionCooldown - currentInteractionCooldown;
 	public float CooldownNormalized => 1-(currentInteractionCooldown/InteractionCooldown);
 
+	public void MarkClosest()
+	{
+		OnClosestMarked.Invoke();
+	}
+
+	public void UnmarkClosest()
+	{
+		OnClosestUnmarked.Invoke();
+	}
+
     public void BeginInteraction()
     {
-        if(!isInteracting && canInteract)
+        if(!isInteracting && CanInteract)
         {
             isInteracting = true;
             OnInteractionBegin.Invoke(this);
@@ -48,7 +62,7 @@ public class InteractableController : MonoBehaviour
 
 	private void CooldownInteraction()
 	{
-		canInteract = true;
+		CanInteract = true;
 		currentInteractionCooldown = 0;
 		OnInteractionCooldownReset.Invoke();
 	}
@@ -57,7 +71,7 @@ public class InteractableController : MonoBehaviour
     { 
         isInteracting = false;
         currentInteractionTime = 0;
-        canInteract = false;
+        CanInteract = false;
         currentInteractionCooldown = InteractionCooldown;
         OnInteractionComplete.Invoke();
     }
@@ -70,7 +84,7 @@ public class InteractableController : MonoBehaviour
 
     public void Start()
     {
-        canInteract = true;
+        CanInteract = true;
         isInteracting= false;
         currentInteractionTime = 0;
         currentInteractionCooldown = 0;

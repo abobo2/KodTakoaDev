@@ -20,6 +20,7 @@ public class CharacterController : MonoBehaviour
 	private List<InteractableController> Interactables;
 
 	private InteractableController currentInteractable;
+	private InteractableController closestInteractable;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,12 +67,39 @@ public class CharacterController : MonoBehaviour
 
 	void HandleInteraction()
 	{
+		InteractableController closest = null;
+		if (Interactables.Count > 0)
+		{
+			if (Interactables.Any(i => i.CanInteract))
+			{
+				closest = Interactables.OrderBy(i => Vector3.Distance(i.transform.position, transform.position)).First(i => i.CanInteract);
+			}
+			if (closest != closestInteractable && closest != null)
+			{
+				if (closestInteractable != null)
+				{
+					closestInteractable.UnmarkClosest();
+				}
+				closestInteractable = closest;
+				closestInteractable.MarkClosest();
+			}
+		}
+		else
+		{
+			if (closestInteractable != null)
+			{
+				if (closestInteractable.CanInteract)
+				{
+					closestInteractable.UnmarkClosest();
+				}
+				closestInteractable = null;
+			}
+		}
+
 		if (Interact)
 		{
-			if (Interactables.Count > 0)
+			if (Interactables.Count > 0 && closest != null)
 			{
-				InteractableController closest = Interactables
-					.OrderBy(i => Vector3.Distance(i.transform.position, transform.position)).First();
 				if (closest != currentInteractable && currentInteractable != null)
 				{
 					currentInteractable.EndInteraction();
