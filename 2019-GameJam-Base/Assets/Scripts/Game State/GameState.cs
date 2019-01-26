@@ -6,10 +6,12 @@ using UniRx;
 public class GameState
 {
     public ReactiveProperty<int> energy;
+    public ReactiveProperty<int> timer;
 
     public GameState()
     {
         energy = new ReactiveProperty<int>();
+        timer = new ReactiveProperty<int>();
 
         energy.Subscribe(v => Debug.Log(v));
     }
