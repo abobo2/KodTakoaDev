@@ -31,11 +31,11 @@ public class Kernel
     }
 
     public List<T> GetInstancesOfType<T>()
-        where T : class
+        where T: class
     {
         List<T> list = container
-            .Where(x => (x as T) != null)
-            .Select(x => x as T)
+            .Where(x => (x.Value as T) != null)
+            .Select(x => x.Value as T)
             .ToList();
 
         if (list == null)
