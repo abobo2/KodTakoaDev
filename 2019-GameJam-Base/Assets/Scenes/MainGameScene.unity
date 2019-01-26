@@ -585,6 +585,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: bedDouble
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1076002f9491ed34aaa18c707b8e2947, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1076002f9491ed34aaa18c707b8e2947, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1076002f9491ed34aaa18c707b8e2947, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 1076002f9491ed34aaa18c707b8e2947, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1076002f9491ed34aaa18c707b8e2947, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.64
@@ -950,6 +966,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 2b580fb2662c202488dd6407d76afb8d, type: 3}
       propertyPath: m_Name
       value: rugRound
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2b580fb2662c202488dd6407d76afb8d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2b580fb2662c202488dd6407d76afb8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2425,6 +2445,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: washer
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3b3c2681a99a7f84586a67ce71730b72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 3b3c2681a99a7f84586a67ce71730b72, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3b3c2681a99a7f84586a67ce71730b72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26.62
@@ -2568,6 +2596,14 @@ PrefabInstance:
     - target: {fileID: 100002, guid: fbd27d65739110249b68d410f8bfdfb2, type: 3}
       propertyPath: m_Name
       value: kitchenStove
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: fbd27d65739110249b68d410f8bfdfb2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: fbd27d65739110249b68d410f8bfdfb2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: fbd27d65739110249b68d410f8bfdfb2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3243,6 +3279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: trashcan
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68c85243c6929ef40a384ce1203445f6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 68c85243c6929ef40a384ce1203445f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.312916
@@ -3528,6 +3568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: benchCushion
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2641e75a81986da43b36985aea45788f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2641e75a81986da43b36985aea45788f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.15
@@ -3684,6 +3728,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 58b0c612bd2240143aa47212765469ef, type: 3}
       propertyPath: m_Name
       value: toaster
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 58b0c612bd2240143aa47212765469ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 58b0c612bd2240143aa47212765469ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4369,6 +4417,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wallDoorway
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4ab69a39ca0e81645b5ca1c1227c759e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4ab69a39ca0e81645b5ca1c1227c759e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.16784
@@ -4443,6 +4495,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 4385fead75631fc4a9d6798bf9d12aed, type: 3}
       propertyPath: m_Name
       value: tableCoffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4385fead75631fc4a9d6798bf9d12aed, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4385fead75631fc4a9d6798bf9d12aed, type: 3}
       propertyPath: m_LocalPosition.x
