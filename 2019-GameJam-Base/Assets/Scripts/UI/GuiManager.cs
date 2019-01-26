@@ -13,6 +13,7 @@ public class GuiManager : MonoBehaviour, IInitiatable
     public Image energyBarImage;
 
     public Animator newLevelTextAnimator;
+    public TextMeshProUGUI txtAnimatedLevel;
 
     public TasksListManager tasksManager;
 
@@ -56,6 +57,9 @@ public class GuiManager : MonoBehaviour, IInitiatable
 
     private void OnNewLevelStarted(Level lvl)
     {
+        txtAnimatedLevel.color = Color.white;
+        txtAnimatedLevel.text = "Level " + lvl.level;
+
         newLevelTextAnimator.gameObject.SetActive(true);
         newLevelTextAnimator.enabled = true;
 
@@ -64,11 +68,23 @@ public class GuiManager : MonoBehaviour, IInitiatable
 
     private void OnLevelFailed(Level lvl)
     {
+        txtAnimatedLevel.text = "Level Failed";
 
+        newLevelTextAnimator.gameObject.SetActive(true);
+        newLevelTextAnimator.enabled = true;
+
+        newLevelTextAnimator.SetTrigger("ShowLevelFailed");
     }
 
     private void OnLevelCompleted(Level lvl)
     {
+        txtAnimatedLevel.color = Color.white;
+        txtAnimatedLevel.text = "Level Completed";
+        
 
+        newLevelTextAnimator.gameObject.SetActive(true);
+        newLevelTextAnimator.enabled = true;
+
+        newLevelTextAnimator.SetTrigger("ShowLevelCompleted");
     }
 }
