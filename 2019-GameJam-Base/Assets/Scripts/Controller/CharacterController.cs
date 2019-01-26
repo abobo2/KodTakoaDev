@@ -44,7 +44,7 @@ public class CharacterController : MonoBehaviour
 			var ic = other.GetComponent<InteractableController>();
 			if (!Interactables.Contains(ic) && ic != null)
 			{
-				Debug.Log("Add Interactable");
+//				Debug.Log("Add Interactable");
 				Interactables.Add(ic);
 			}
 		}
@@ -59,7 +59,7 @@ public class CharacterController : MonoBehaviour
 			var ic = other.GetComponent<InteractableController>();
 			if (Interactables.Contains(ic))
 			{
-				Debug.Log("Remove Interactable");
+//				Debug.Log("Remove Interactable");
 				Interactables.Remove(ic);
 			}
 		}
@@ -108,7 +108,7 @@ public class CharacterController : MonoBehaviour
 					isInteracting = false;
 				}else if (currentInteractable == null)
 				{
-					Debug.Log("interacting");
+//					Debug.Log("interacting");
 					currentInteractable = closest;
 					currentInteractable.BeginInteraction();
 					isInteracting = true;

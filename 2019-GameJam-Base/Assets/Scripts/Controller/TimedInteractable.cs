@@ -48,5 +48,10 @@ namespace UnityTemplateProjects.Controller
                 interacted = false;
             }
         }
+
+        public override void InvokeInteraction()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
