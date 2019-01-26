@@ -9,7 +9,7 @@ using TMPro;
 public class GuiManager : MonoBehaviour, IInitiatable
 {
     public TextMeshProUGUI txtTimer;
-    public Slider energiBar;
+    public Slider energyBar;
 
     public TasksListManager tasksManager;
 
@@ -25,7 +25,7 @@ public class GuiManager : MonoBehaviour, IInitiatable
 
     private void OnEnergyChange(int newEnergyVal)
     {
-
+        energyBar.value = (float)data.energy.Value / data.maxEnergy;
     }
 
     private void OnTimerChanged(int seconds)
