@@ -6,6 +6,7 @@ using UniRx;
 public class GameState
 {
     public ReactiveProperty<int> energy;
+    public ReactiveProperty<int> timer;
 
     public GameState()
     {
