@@ -7,8 +7,12 @@ public class ServiceLocator : MonoBehaviour
 {
     public static ServiceLocator instance;
 
+    public int miniGameFailTakenTime = 5;
+    public float miniGameSpeedGiven = 0.25f;
+
     public GuiManager guiManager;
     public GameManager gameManager;
+    public TypeMiniGame typeMiniGame;
 
     private Kernel kernel;
 
@@ -33,6 +37,8 @@ public class ServiceLocator : MonoBehaviour
 
         CharacterController characterController = FindObjectOfType<CharacterController>();
         kernel.Add<CharacterController>(characterController);
+
+        kernel.Add<TypeMiniGame>(typeMiniGame);
     }
 
     private void Start()

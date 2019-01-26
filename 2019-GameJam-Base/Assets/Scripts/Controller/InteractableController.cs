@@ -47,6 +47,10 @@ public class InteractableController : MonoBehaviour
 	public float CooldownNormalized => 1-(currentInteractionCooldown/InteractionCooldown);
 
     private GameEventsManager gameEventsManager;
+    private TypeMiniGame typeMiniGame;
+    private GameState gameState;
+
+    public bool RequiresMiniGame;
 
 	public void MarkClosest()
 	{
@@ -92,7 +96,23 @@ public class InteractableController : MonoBehaviour
         currentInteractionCooldown = InteractionCooldown;
         OnInteractionComplete.Invoke();
 
-        gameEventsManager.InvokeInteraction(InteractionType);
+        if (RequiresMiniGame)
+        {
+            typeMiniGame.StartGame(
+                () => 
+                {
+                    gameEventsManager.InvokeInteraction(InteractionType);
+                    gameState.playerSpeed.Value += ServiceLocator.instance.miniGameSpeedGiven;
+                }, 
+                () => 
+                {
+                    gameState.timer.Value -= ServiceLocator.instance.miniGameFailTakenTime;
+                });
+        }
+        else
+        {
+            gameEventsManager.InvokeInteraction(InteractionType);
+        }
     }
 
     public void EndInteraction()
@@ -109,6 +129,8 @@ public class InteractableController : MonoBehaviour
     public void Start()
     {
         gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
+        typeMiniGame = ServiceLocator.instance.GetInstanceOfType<TypeMiniGame>();
+        gameState = ServiceLocator.instance.GetInstanceOfType<GameState>();
 
         gameEventsManager.ObserveLevelTaskStarted().Subscribe(t =>
         {
