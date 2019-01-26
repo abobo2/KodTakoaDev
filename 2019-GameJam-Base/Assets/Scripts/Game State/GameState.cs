@@ -11,6 +11,7 @@ public class GameState
     public GameState()
     {
         energy = new ReactiveProperty<int>();
+        timer = new ReactiveProperty<int>();
 
         energy.Subscribe(v => Debug.Log(v));
     }
