@@ -29,7 +29,7 @@ public class ServiceLocator : MonoBehaviour
         kernel.Add<GameEventsManager>(new GameEventsManager());
 
         kernel.Add<GuiManager>(guiManager);
-        kernel.Add<GameManager>(gameManager);
+        kernel.Add<GameManager>(Instantiate(gameManager));
     }
 
     private void Start()
