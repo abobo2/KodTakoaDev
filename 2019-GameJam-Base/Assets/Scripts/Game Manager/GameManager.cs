@@ -6,10 +6,9 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 {
-    private int energyThatTvGives = 25;
-    private float energyDecreaseSpeed = 1f;
-    private int energyTakenPerTick = 1;
-
+    public int energyThatTvGives = 25;
+    public float energyDecreaseSpeed = 1f;
+    public int energyTakenPerTick = 1;
 
     private static float PlayerPlayerStartingSpeed = 10f;
 
