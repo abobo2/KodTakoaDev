@@ -8,4 +8,7 @@ public static class Constants
             Quaternion targetRotation = Quaternion.AngleAxis(Camera.main.transform.eulerAngles.y, Vector3.up);
             return targetRotation * new Vector3(v2.x, 0, v2.y);
         };
+
+	public static string InteractableTag = "Interactable";
+	public static string PlayerTag = "Player";
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -12,10 +13,17 @@ public class CharacterController : MonoBehaviour
 
     public float RotationSpeed;
 
+    public bool Interact;
+
+	private bool isInteracting = false;
+
+	private List<InteractableController> Interactables;
+
+	private InteractableController currentInteractable;
     // Start is called before the first frame update
     void Start()
     {
-        
+		Interactables = new List<InteractableController>();
     }
 
     // Update is called once per frame
@@ -23,31 +31,98 @@ public class CharacterController : MonoBehaviour
     {
         GetInput();
         Rotate();
-        Move();
-        
+		Move();
+	    HandleInteraction();
     }
+
+	public void OnTriggerEnter(Collider other)
+	{
+//		Debug.Log(other.gameObject.tag);
+		if (other.gameObject.tag == Constants.InteractableTag)
+		{
+			var ic = other.GetComponent<InteractableController>();
+			if (!Interactables.Contains(ic) && ic != null)
+			{
+				Debug.Log("Add Interactable");
+				Interactables.Add(ic);
+			}
+		}
+	}
+
+	public void OnTriggerExit(Collider other)
+	{
+//		Debug.Log(other.gameObject.tag);
+
+		if (other.gameObject.tag == Constants.InteractableTag)
+		{
+			var ic = other.GetComponent<InteractableController>();
+			if (Interactables.Contains(ic))
+			{
+				Debug.Log("Remove Interactable");
+				Interactables.Remove(ic);
+			}
+		}
+	}
+
+	void HandleInteraction()
+	{
+		if (Interact)
+		{
+			if (Interactables.Count > 0)
+			{
+				InteractableController closest = Interactables
+					.OrderBy(i => Vector3.Distance(i.transform.position, transform.position)).First();
+				if (closest != currentInteractable && currentInteractable != null)
+				{
+					currentInteractable.EndInteraction();
+					isInteracting = false;
+				}else if (currentInteractable == null)
+				{
+					Debug.Log("interacting");
+					currentInteractable = closest;
+					currentInteractable.BeginInteraction();
+					isInteracting = true;
+				}
+
+			}
+			else if ( currentInteractable != null )
+			{
+				currentInteractable.EndInteraction();
+				currentInteractable = null;
+				isInteracting = false;
+			}
+		}
+		else if (isInteracting)
+		{
+			if (currentInteractable != null)
+			{
+				currentInteractable.EndInteraction();
+				currentInteractable = null;
+				isInteracting = false;
+			}
+		}
+	}
 
     void GetInput()
     {
         playerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Interact = Input.GetButton("Interact");
     }
 
     void Rotate()
     { 
-        Debug.Log("TODO");
         if (playerInput.magnitude > 0.2f)
         {
             Quaternion targetRot = Quaternion.LookRotation(Constants.InputToMotionFunction(playerInput));
             transform.rotation = (Quaternion.RotateTowards(transform.rotation, targetRot, RotationSpeed) );
         }
-//        transform.rotate;
-//        Mathf.Atan2()
-      
     }
 
     void Move()
     {
-        
-        transform.Translate(transform.forward * MoveSpeed * playerInput.magnitude, Space.World);
+        if (playerInput.magnitude > 0.2f)
+        {
+            transform.Translate(transform.forward * MoveSpeed * playerInput.magnitude, Space.World);
+        }
     }
 }
