@@ -6,6 +6,7 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;
     public float smoothing = 5f;
+    public float distance;
     Vector3 offset;
 
     // Use this for initialization
@@ -15,9 +16,13 @@ public class CameraFollow : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void FixedUpdate()
     {
-        Vector3 targetCamPos = target.position + offset;
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
+        Ray r = new Ray(target.position, -transform.forward);
+        Vector3 finalPos = r.GetPoint(distance);
+
+        transform.position = Vector3.MoveTowards(finalPos, finalPos, .1f);
+//        Vector3 targetCamPos = target.position + offset;
+//        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
 }

@@ -35,7 +35,7 @@ public class CharacterController : MonoBehaviour, IInitiatable
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         GetInput();
         Rotate();
@@ -159,7 +159,7 @@ public class CharacterController : MonoBehaviour, IInitiatable
     {
         if (playerInput.magnitude > 0.2f)
         {
-            transform.Translate(transform.forward * gameState.playerSpeed.Value * playerInput.magnitude, Space.World);
+            transform.GetComponent<Rigidbody>().velocity = transform.forward * gameState.playerSpeed.Value * playerInput.magnitude;
         }
     }
 }

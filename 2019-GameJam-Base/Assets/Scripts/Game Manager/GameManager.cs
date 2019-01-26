@@ -7,7 +7,7 @@ using System.Linq;
 public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 {
     private static int EnergyThatTvGives = 25;
-    private static float PlayerPlayerStartingSpeed = 0.3f;
+    private static float PlayerPlayerStartingSpeed = 10f;
 
     public Level[] levels;
 
