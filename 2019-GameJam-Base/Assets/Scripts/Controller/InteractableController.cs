@@ -12,7 +12,7 @@ public class InteractableController : MonoBehaviour
 
 	public float InteractionCooldown;
 
-	// public Interactable InteractionType;
+	public Interactable InteractionType;
 
 	public UnityEvent OnInteractionComplete;
 
@@ -25,7 +25,6 @@ public class InteractableController : MonoBehaviour
 	public UnityEvent OnClosestUnmarked;
 
     public InteractableEvent OnInteractionBegin;
-
     
     private float currentInteractionTime;
     
@@ -40,6 +39,8 @@ public class InteractableController : MonoBehaviour
 
 	public float CooldownAbsolute => InteractionCooldown - currentInteractionCooldown;
 	public float CooldownNormalized => 1-(currentInteractionCooldown/InteractionCooldown);
+
+    private GameEventsManager gameEventsManager;
 
 	public void MarkClosest()
 	{
@@ -80,10 +81,14 @@ public class InteractableController : MonoBehaviour
     {
         isInteracting = false;
         OnInteractionEnd.Invoke();
+
+        gameEventsManager.InvokeInteraction(InteractionType);
     }
 
     public void Start()
     {
+        gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
+
         CanInteract = true;
         isInteracting= false;
         currentInteractionTime = 0;
