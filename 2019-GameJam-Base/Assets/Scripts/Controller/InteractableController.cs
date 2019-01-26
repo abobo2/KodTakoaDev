@@ -91,6 +91,8 @@ public class InteractableController : MonoBehaviour
         CanInteract = false;
         currentInteractionCooldown = InteractionCooldown;
         OnInteractionComplete.Invoke();
+
+        gameEventsManager.InvokeInteraction(InteractionType);
     }
 
     public void EndInteraction()
@@ -102,8 +104,6 @@ public class InteractableController : MonoBehaviour
 
         isInteracting = false;
         OnInteractionEnd.Invoke();
-
-        gameEventsManager.InvokeInteraction(InteractionType);
     }
 
     public void Start()
