@@ -6,7 +6,11 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 {
-    private static int EnergyThatTvGives = 25;
+    private int energyThatTvGives = 25;
+    private float energyDecreaseSpeed = 1f;
+    private int energyTakenPerTick = 1;
+
+
     private static float PlayerPlayerStartingSpeed = 10f;
 
     public Level[] levels;
@@ -74,11 +78,11 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
     {
         while (gameState.energy.Value > 0)
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(energyDecreaseSpeed);
 
             if (isGameRunning)
             {
-                gameState.energy.Value -= 1;
+                gameState.energy.Value -= energyTakenPerTick;
             }
         }
     }
@@ -206,13 +210,13 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
         
         if (interactionMade == Interactable.TV)
         {
-            if (gameState.energy.Value + EnergyThatTvGives > gameState.maxEnergy)
+            if (gameState.energy.Value + energyThatTvGives > gameState.maxEnergy)
             {
                 gameState.energy.Value = gameState.maxEnergy;
             }
             else
             {
-                gameState.energy.Value += EnergyThatTvGives;
+                gameState.energy.Value += energyThatTvGives;
             }
         }
     }
