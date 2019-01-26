@@ -276,8 +276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   txtTimer: {fileID: 4812288369090878847}
-  energyBar: {fileID: 0}
-  energyBarImage: {fileID: 0}
+  energyBar: {fileID: 1093325701285123557}
+  energyBarImage: {fileID: 533958902053150787}
   newLevelTextAnimator: {fileID: 8338405485606410976}
   tasksManager: {fileID: 6008676813847142156}
 --- !u!1 &3598674330872409920
@@ -534,6 +534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8691773190896009306}
   - component: {fileID: 8338405485606410976}
+  - component: {fileID: 9100666768933074030}
   m_Layer: 5
   m_Name: LevelStarted
   m_TagString: Untagged
@@ -580,6 +581,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9100666768933074030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232013205266936014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd48c50aaa395e4684cd5ddd4b59a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8338405485606410976}
 --- !u!1001 &5808793947629892887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -587,11 +601,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3217765398081504607}
     m_Modifications:
-    - target: {fileID: 7126166548448204218, guid: b9c1651b5b0df6140b947924fe5c8efc,
-        type: 3}
-      propertyPath: m_Name
-      value: EnergyBar
-      objectReference: {fileID: 0}
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -650,7 +659,7 @@ PrefabInstance:
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 904
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
@@ -670,7 +679,7 @@ PrefabInstance:
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
@@ -680,7 +689,7 @@ PrefabInstance:
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7374449673462394663, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
@@ -697,10 +706,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7192772661077219067, guid: b9c1651b5b0df6140b947924fe5c8efc,
+    - target: {fileID: 7126166548448204218, guid: b9c1651b5b0df6140b947924fe5c8efc,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
+      propertyPath: m_Name
+      value: EnergyBar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9c1651b5b0df6140b947924fe5c8efc, type: 3}
@@ -710,3 +719,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5808793947629892887}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1093325701285123557 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6895220758881804530, guid: b9c1651b5b0df6140b947924fe5c8efc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5808793947629892887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &533958902053150787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6338248695684928852, guid: b9c1651b5b0df6140b947924fe5c8efc,
+    type: 3}
+  m_PrefabInstance: {fileID: 5808793947629892887}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

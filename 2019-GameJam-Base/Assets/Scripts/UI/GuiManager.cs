@@ -56,7 +56,10 @@ public class GuiManager : MonoBehaviour, IInitiatable
 
     private void OnNewLevelStarted(Level lvl)
     {
+        newLevelTextAnimator.gameObject.SetActive(true);
+        newLevelTextAnimator.enabled = true;
 
+        newLevelTextAnimator.SetTrigger("ShowNewLevel");
     }
 
     private void OnLevelFailed(Level lvl)
