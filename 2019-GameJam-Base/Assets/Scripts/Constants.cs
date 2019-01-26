@@ -15,5 +15,6 @@ public static class Constants
         return targetRotation * v3;
     };
 
-    public static string PlayerTag => "Player";
+	public static string InteractableTag = "Interactable";
+	public static string PlayerTag = "Player";
 }
