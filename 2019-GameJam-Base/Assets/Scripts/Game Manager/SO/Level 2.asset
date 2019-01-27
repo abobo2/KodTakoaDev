@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: Level 2
   m_EditorClassIdentifier: 
   level: 2
-  time: 60
+  time: 45
   taskClusters:
   - tasks:
-    - conditionMessage: 1
+    - conditionMessage: Oven
       interactionToBeDone: 1
-    - conditionMessage: 2
+  - tasks:
+    - conditionMessage: Lyuteniza
+      interactionToBeDone: 5
+  - tasks:
+    - conditionMessage: Durzost i Krasota
       interactionToBeDone: 2
-    - conditionMessage: 3
+  - tasks:
+    - conditionMessage: Baniza
       interactionToBeDone: 3

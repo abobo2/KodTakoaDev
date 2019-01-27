@@ -43,6 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6c84440ff61174c9a656d8072a092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energyThatTvGives: 70
+  energyDecreaseSpeed: 5
+  energyTakenPerTick: 15
   levels:
   - {fileID: 11400000, guid: 5d1930f3e5f9b56488c5a859aa5d427c, type: 2}
   - {fileID: 11400000, guid: 9bb03a1b268fccb45aea87fa35fcd6f8, type: 2}
+  - {fileID: 11400000, guid: 0e0cd4dede8c11b4aae4ece46a6ecf21, type: 2}
+  - {fileID: 11400000, guid: 3e0acdf79e514fe469815f805ea7e42d, type: 2}
+  - {fileID: 11400000, guid: a0470b1763de4ad4b864d395e702f74b, type: 2}
+  - {fileID: 11400000, guid: 5f8e892d27f178743b5ce7c53f8df8d7, type: 2}
+  - {fileID: 11400000, guid: 703beb5f1bdcd454d98472e73b4e73ac, type: 2}
+  - {fileID: 11400000, guid: f4f263bc51d3d8440b4f112c06042192, type: 2}
+  - {fileID: 11400000, guid: 6c6a3816f2a6b894abe14fdd5474b9c0, type: 2}
+  - {fileID: 11400000, guid: c456e99845cf4f14e91ea73b3a169ae0, type: 2}

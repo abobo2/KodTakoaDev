@@ -10,17 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b08254500d1cb642b620240e13d47d4, type: 3}
-  m_Name: Level 1
+  m_Name: Level 9
   m_EditorClassIdentifier: 
-  level: 1
-  time: 50
-  taskClusters:
-  - tasks:
-    - conditionMessage: Oven
-      interactionToBeDone: 1
-  - tasks:
-    - conditionMessage: Turkish sapunka
-      interactionToBeDone: 2
-  - tasks:
-    - conditionMessage: Sarmi
-      interactionToBeDone: 4
+  level: 0
+  time: 0
+  taskClusters: []
