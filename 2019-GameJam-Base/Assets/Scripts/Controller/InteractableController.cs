@@ -110,7 +110,7 @@ public class InteractableController : MonoBehaviour
         OnInteractionComplete.Invoke();
 
         Debug.Log("iNTERACTION COMPLETE");
-        if (RequiresMiniGame)
+        if (RequiresMiniGame && !WordMiniGame.GameIsRunning)
         {
             wordMiniGame.StartMinigame(
                 () => 

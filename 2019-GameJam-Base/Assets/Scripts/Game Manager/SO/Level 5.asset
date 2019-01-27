@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 5
   m_EditorClassIdentifier: 
   level: 5
-  time: 60
+  time: 120
   taskClusters:
   - tasks:
     - conditionMessage: Baniza

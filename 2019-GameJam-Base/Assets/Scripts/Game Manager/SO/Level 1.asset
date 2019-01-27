@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   level: 1
-  time: 50
+  time: 60
   taskClusters:
   - tasks:
     - conditionMessage: Oven

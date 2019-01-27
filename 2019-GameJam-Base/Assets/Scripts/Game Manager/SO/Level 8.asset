@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 8
   m_EditorClassIdentifier: 
   level: 8
-  time: 40
+  time: 30
   taskClusters:
   - tasks:
     - conditionMessage: bTV News

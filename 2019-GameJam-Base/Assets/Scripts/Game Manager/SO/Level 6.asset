@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 6
   m_EditorClassIdentifier: 
   level: 6
-  time: 35
+  time: 80
   taskClusters:
   - tasks:
     - conditionMessage: Cook Children oops I meant...

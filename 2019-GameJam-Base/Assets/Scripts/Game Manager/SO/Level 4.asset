@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 4
   m_EditorClassIdentifier: 
   level: 4
-  time: 70
+  time: 105
   taskClusters:
   - tasks:
     - conditionMessage: Ben 10
