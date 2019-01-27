@@ -48,7 +48,7 @@ public class InteractableController : MonoBehaviour
 	public float CooldownNormalized => 1-(currentInteractionCooldown/InteractionCooldown);
 
     private GameEventsManager gameEventsManager;
-    private TypeMiniGame typeMiniGame;
+    private WordMiniGame wordMiniGame;
     private GameState gameState;
 
     public bool RequiresMiniGame;
@@ -109,9 +109,10 @@ public class InteractableController : MonoBehaviour
         currentInteractionCooldown = InteractionCooldown;
         OnInteractionComplete.Invoke();
 
+        Debug.Log("iNTERACTION COMPLETE");
         if (RequiresMiniGame)
         {
-            typeMiniGame.StartGame(
+            wordMiniGame.StartMinigame(
                 () => 
                 {
                     gameEventsManager.InvokeInteraction(InteractionType);
@@ -148,7 +149,7 @@ public class InteractableController : MonoBehaviour
     public void Start()
     {
         gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
-        typeMiniGame = ServiceLocator.instance.GetInstanceOfType<TypeMiniGame>();
+        wordMiniGame = ServiceLocator.instance.GetInstanceOfType<WordMiniGame>();
         gameState = ServiceLocator.instance.GetInstanceOfType<GameState>();
 
         gameEventsManager.ObserveLevelTaskStarted().Subscribe(t =>
@@ -175,6 +176,20 @@ public class InteractableController : MonoBehaviour
 
 	public void Update()
 	{
+//	    if (Input.GetKeyUp(KeyCode.F10))
+//	    {
+//
+//	        wordMiniGame.StartMinigame(
+//	            () =>
+//	            {
+//	                gameEventsManager.InvokeInteraction(InteractionType);
+//	                gameState.playerSpeed.Value += ServiceLocator.instance.miniGameSpeedGiven;
+//	            },
+//	            () =>
+//	            {
+//	                gameState.timer.Value -= ServiceLocator.instance.miniGameFailTakenTime;
+//	            });
+//        }
 		if (isInteracting && currentInteractionCooldown == 0f)
 		{
 			currentInteractionTime += Time.deltaTime;

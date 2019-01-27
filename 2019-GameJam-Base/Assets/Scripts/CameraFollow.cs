@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
@@ -19,8 +20,7 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         Ray r = new Ray(target.position, -transform.forward);
-        Vector3 finalPos = r.GetPoint(distance);
-
+        Vector3 finalPos = r.GetPoint(distance) + transform.TransformVector(Screenshake.ScreenshakeVector);
         transform.position = Vector3.MoveTowards(finalPos, finalPos, .1f);
 //        Vector3 targetCamPos = target.position + offset;
 //        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);

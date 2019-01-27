@@ -142,13 +142,17 @@ public class CharacterController : MonoBehaviour, IInitiatable
 
     void GetInput()
     {
-        playerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        Interact = Input.GetButton("Interact");
+        if (!WordMiniGame.GameIsRunning)
+        {
+            playerInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+            Interact = Input.GetButton("Interact");
+        }
+        
     }
 
     void Rotate()
     { 
-        if (playerInput.magnitude > 0.2f)
+        if (playerInput.magnitude > 0.2f )
         {
             Quaternion targetRot = Quaternion.LookRotation(Constants.InputToMotionFunction(playerInput));
             transform.rotation = (Quaternion.RotateTowards(transform.rotation, targetRot, RotationSpeed) );
@@ -157,7 +161,7 @@ public class CharacterController : MonoBehaviour, IInitiatable
 
     void Move()
     {
-        if (playerInput.magnitude > 0.2f)
+        if (playerInput.magnitude > 0.2f )
         {
             transform.GetComponent<Rigidbody>().velocity = transform.forward * gameState.playerSpeed.Value * playerInput.magnitude;
         }

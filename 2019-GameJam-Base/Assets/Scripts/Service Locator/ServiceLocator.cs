@@ -13,6 +13,7 @@ public class ServiceLocator : MonoBehaviour
     public GuiManager guiManager;
     public GameManager gameManager;
     public TypeMiniGame typeMiniGame;
+    public WordMiniGame wordMiniGame;
 
     private Kernel kernel;
 
@@ -39,6 +40,7 @@ public class ServiceLocator : MonoBehaviour
         kernel.Add<CharacterController>(characterController);
 
         kernel.Add<TypeMiniGame>(typeMiniGame);
+        kernel.Add<WordMiniGame>(wordMiniGame);
     }
 
     private void Start()
