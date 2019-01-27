@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyThatTvGives: 70
-  energyDecreaseSpeed: 5
-  energyTakenPerTick: 15
+  energyDecreaseSpeed: 1
+  energyTakenPerTick: 3
   levels:
   - {fileID: 11400000, guid: 5d1930f3e5f9b56488c5a859aa5d427c, type: 2}
   - {fileID: 11400000, guid: 9bb03a1b268fccb45aea87fa35fcd6f8, type: 2}

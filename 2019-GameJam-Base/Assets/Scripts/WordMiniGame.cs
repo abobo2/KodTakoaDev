@@ -35,22 +35,38 @@ public class WordMiniGame : MonoBehaviour
     private int currentIndex;
 
 
-    public List<string> phraseList = new List<string>()
+    private List<string> phraseList = new List<string>()
     {
-        "banica",
-        "lutenica",
-        "djangur",
-        "pravene",
-        "mandja",
-        "musaka",
-        "patka",
-        "govedo",
-        "6ibek",
-        "maniak",
-        "lice",
-        "pls edit",
-        "susipaha q taq durjava",
-        "pi6i kur i begai",
+        "Flip over the steak",
+        "Fry some eggs",
+        "Add a touch of love",
+        "Add a lot of butter",
+        "Take their bread away",
+        "Add white powder to the lyutenica",
+        "Bake some cake",
+        "Make some kozunak",
+        "This is a piece of cake",
+        "Easy as pie",
+        "Turn the oven on",
+        "Add LOTS of spices",
+        "Cut potatoes",
+        "Drink Rakia",
+        "Dang they ruined the country",
+        "Make kompot",
+        "Add 2 tbsp pig fat",
+        "I hope they are not vegan",
+        "I have no time",
+        "I have to hurry up!",
+        "Where is Courage?",
+        "Where is my husband?",
+        "Home sweet home",
+        "Those cookies were lit",
+        "Towels can’t tell jokes. They have a dry sense of humor",
+        "How does Moses make coffee? Hebrews it",
+        "Sausage puns are the wurst",
+        "Want to hear a pizza joke? Nevermind, it’s too cheesy",
+        "Why should you never trust a train? They have loco motives",
+        "To write with a broken pencil is pointless",
     };
 
     public void StartMinigame(Action onComplete, Action onWrongInput){
