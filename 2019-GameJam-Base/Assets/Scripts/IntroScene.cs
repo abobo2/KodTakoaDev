@@ -49,6 +49,9 @@ public class IntroScene : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        introImg.color = endColor;
+        introImg.rectTransform.localScale = endScale;
+
         yield return new WaitForSeconds(3f);
 
         currentTime = 0;
@@ -62,6 +65,8 @@ public class IntroScene : MonoBehaviour
             yield return new WaitForEndOfFrame();
         }
 
+        introImg.color = startColor;
+
         StartCoroutine(ShowScreen(currentScreenNum));
     }
 
@@ -74,10 +79,12 @@ public class IntroScene : MonoBehaviour
         }
         else if (screenNum == 2)
         {
+            //screen1.gameObject.SetActive(false);
             screenImg = screen2;
         }
         else
         {
+            //screen2.gameObject.SetActive(false);
             screenImg = screen3;
         }
 
@@ -98,6 +105,8 @@ public class IntroScene : MonoBehaviour
 
             yield return new WaitForEndOfFrame();
         }
+
+        screenImg.color = endColor;
 
         yield return new WaitForSeconds(3f);
 
