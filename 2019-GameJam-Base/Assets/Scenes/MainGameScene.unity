@@ -5714,7 +5714,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779299484}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 3496f6ffff8ed7a4ea717c08589e6e58, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -8531,7 +8531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_Drag
-      value: 10
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_AngularDrag
@@ -8547,7 +8547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_UseGravity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_CollisionDetection
@@ -8555,7 +8555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_Interpolate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
