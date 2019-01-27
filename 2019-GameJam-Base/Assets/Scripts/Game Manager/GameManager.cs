@@ -168,11 +168,11 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
         LevelFailed();
     }
 
+        private IDisposable restartRoutine;
     private void LevelFailed()
     {
         isGameRunning = false;
         gameEventsManager.InvokeLevelFailed(levels[currentLevelIndex]);
-        IDisposable restartRoutine;
         float seconds = 5f;
         restartRoutine = Observable.Interval(TimeSpan.FromSeconds(1)).Subscribe(sec =>
         {
@@ -184,12 +184,17 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 
     private void WaitRestart(float timeLeft)
     {
-        restartContainer.gameObject.SetActive(true);
-        restartText.text = "Restarting in " + timeLeft;
+//        restartContainer.gameObject.SetActive(true);
+//        restartText.text = "Restarting in " + timeLeft;
         if (timeLeft >= 0.5f)
         {
             Debug.Log("Restart");
             SceneManager.LoadScene(0);
+        }
+
+        if (restartRoutine != null)
+        {
+            restartRoutine.Dispose();
         }
     }
 
