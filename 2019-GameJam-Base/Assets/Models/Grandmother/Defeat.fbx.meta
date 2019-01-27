@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10f0ed732e1aac544aedf72ba99b882d
+guid: 448be665637969c4a815d66496b1bcd1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -25,32 +25,32 @@ ModelImporter:
     100038: Cylinder001
     100040: Cylinder002
     100042: Cylinder003
-    100044: mixamorig:Head
-    100046: mixamorig:HeadTop_End
-    100048: mixamorig:Hips
-    100050: mixamorig:LeftArm
-    100052: mixamorig:LeftFoot
-    100054: mixamorig:LeftForeArm
-    100056: mixamorig:LeftHand
-    100058: mixamorig:LeftLeg
-    100060: mixamorig:LeftShoulder
-    100062: mixamorig:LeftToe_End
-    100064: mixamorig:LeftToeBase
-    100066: mixamorig:LeftUpLeg
-    100068: mixamorig:Neck
-    100070: mixamorig:RightArm
-    100072: mixamorig:RightFoot
-    100074: mixamorig:RightForeArm
-    100076: mixamorig:RightHand
-    100078: mixamorig:RightLeg
-    100080: mixamorig:RightShoulder
-    100082: mixamorig:RightToe_End
-    100084: mixamorig:RightToeBase
-    100086: mixamorig:RightUpLeg
-    100088: mixamorig:Spine
-    100090: mixamorig:Spine1
-    100092: mixamorig:Spine2
-    100094: //RootNode
+    100044: //RootNode
+    100046: mixamorig:Head
+    100048: mixamorig:HeadTop_End
+    100050: mixamorig:Hips
+    100052: mixamorig:LeftArm
+    100054: mixamorig:LeftFoot
+    100056: mixamorig:LeftForeArm
+    100058: mixamorig:LeftHand
+    100060: mixamorig:LeftLeg
+    100062: mixamorig:LeftShoulder
+    100064: mixamorig:LeftToe_End
+    100066: mixamorig:LeftToeBase
+    100068: mixamorig:LeftUpLeg
+    100070: mixamorig:Neck
+    100072: mixamorig:RightArm
+    100074: mixamorig:RightFoot
+    100076: mixamorig:RightForeArm
+    100078: mixamorig:RightHand
+    100080: mixamorig:RightLeg
+    100082: mixamorig:RightShoulder
+    100084: mixamorig:RightToe_End
+    100086: mixamorig:RightToeBase
+    100088: mixamorig:RightUpLeg
+    100090: mixamorig:Spine
+    100092: mixamorig:Spine1
+    100094: mixamorig:Spine2
     400000: Box002
     400002: Box003
     400004: Box004
@@ -73,32 +73,32 @@ ModelImporter:
     400038: Cylinder001
     400040: Cylinder002
     400042: Cylinder003
-    400044: mixamorig:Head
-    400046: mixamorig:HeadTop_End
-    400048: mixamorig:Hips
-    400050: mixamorig:LeftArm
-    400052: mixamorig:LeftFoot
-    400054: mixamorig:LeftForeArm
-    400056: mixamorig:LeftHand
-    400058: mixamorig:LeftLeg
-    400060: mixamorig:LeftShoulder
-    400062: mixamorig:LeftToe_End
-    400064: mixamorig:LeftToeBase
-    400066: mixamorig:LeftUpLeg
-    400068: mixamorig:Neck
-    400070: mixamorig:RightArm
-    400072: mixamorig:RightFoot
-    400074: mixamorig:RightForeArm
-    400076: mixamorig:RightHand
-    400078: mixamorig:RightLeg
-    400080: mixamorig:RightShoulder
-    400082: mixamorig:RightToe_End
-    400084: mixamorig:RightToeBase
-    400086: mixamorig:RightUpLeg
-    400088: mixamorig:Spine
-    400090: mixamorig:Spine1
-    400092: mixamorig:Spine2
-    400094: //RootNode
+    400044: //RootNode
+    400046: mixamorig:Head
+    400048: mixamorig:HeadTop_End
+    400050: mixamorig:Hips
+    400052: mixamorig:LeftArm
+    400054: mixamorig:LeftFoot
+    400056: mixamorig:LeftForeArm
+    400058: mixamorig:LeftHand
+    400060: mixamorig:LeftLeg
+    400062: mixamorig:LeftShoulder
+    400064: mixamorig:LeftToe_End
+    400066: mixamorig:LeftToeBase
+    400068: mixamorig:LeftUpLeg
+    400070: mixamorig:Neck
+    400072: mixamorig:RightArm
+    400074: mixamorig:RightFoot
+    400076: mixamorig:RightForeArm
+    400078: mixamorig:RightHand
+    400080: mixamorig:RightLeg
+    400082: mixamorig:RightShoulder
+    400084: mixamorig:RightToe_End
+    400086: mixamorig:RightToeBase
+    400088: mixamorig:RightUpLeg
+    400090: mixamorig:Spine
+    400092: mixamorig:Spine1
+    400094: mixamorig:Spine2
     2100000: glasses
     2100002: grey hair
     2100004: ele4e
@@ -179,35 +179,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: mixamo.com
-      takeName: mixamo.com
-      firstFrame: 0
-      lastFrame: 31
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

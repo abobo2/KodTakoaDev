@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour, IInitiatable
 {
+    public Animator animator;
+
     public Quaternion targetRotation;
 
     public Vector2 playerInput;
@@ -34,6 +36,8 @@ public class CharacterController : MonoBehaviour, IInitiatable
 		Interactables = new List<InteractableController>();
     }
 
+    private bool isWalking;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -41,6 +45,14 @@ public class CharacterController : MonoBehaviour, IInitiatable
         Rotate();
 		Move();
 	    HandleInteraction();
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+        }
+        else
+        {
+           // animator.SetBool("isWalking", false);
+        }
     }
 
 	public void OnTriggerEnter(Collider other)
@@ -117,14 +129,19 @@ public class CharacterController : MonoBehaviour, IInitiatable
 				{
 //					Debug.Log("interacting");
 					currentInteractable = closest;
-					currentInteractable.BeginInteraction();
+
+                    animator.SetBool("isInteracting", true);
+
+                    currentInteractable.BeginInteraction();
 					isInteracting = true;
 				}
 
 			}
 			else if ( currentInteractable != null )
 			{
-				currentInteractable.EndInteraction();
+                animator.SetBool("isInteracting", false);
+                
+                currentInteractable.EndInteraction();
 				currentInteractable = null;
 				isInteracting = false;
 			}
@@ -133,7 +150,9 @@ public class CharacterController : MonoBehaviour, IInitiatable
 		{
 			if (currentInteractable != null)
 			{
-				currentInteractable.EndInteraction();
+                animator.SetBool("isInteracting", false);
+
+                currentInteractable.EndInteraction();
 				currentInteractable = null;
 				isInteracting = false;
 			}
@@ -163,7 +182,13 @@ public class CharacterController : MonoBehaviour, IInitiatable
     {
         if (playerInput.magnitude > 0.2f )
         {
+            animator.SetBool("isWalking", true);
+
             transform.GetComponent<Rigidbody>().velocity = transform.forward * gameState.playerSpeed.Value * playerInput.magnitude;
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
         }
     }
 }

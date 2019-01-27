@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10f0ed732e1aac544aedf72ba99b882d
+guid: 0f8964800a5450b42a692212d48c0c98
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -7,24 +7,24 @@ ModelImporter:
     100002: Box003
     100004: Box004
     100006: Box005
-    100008: Box006
-    100010: Box007
-    100012: Box008
-    100014: Box009
-    100016: Box010
-    100018: Box011
-    100020: Box012
-    100022: Box013
-    100024: Box014
-    100026: Box015
-    100028: Box016
-    100030: Box017
-    100032: Box018
-    100034: Box019
-    100036: Box020
-    100038: Cylinder001
-    100040: Cylinder002
-    100042: Cylinder003
+    100008: Box007
+    100010: Box008
+    100012: Box009
+    100014: Box010
+    100016: Box011
+    100018: Box012
+    100020: Box013
+    100022: Box014
+    100024: Box015
+    100026: Box016
+    100028: Box017
+    100030: Box018
+    100032: Box019
+    100034: Box020
+    100036: Cylinder001
+    100038: Cylinder002
+    100040: Cylinder003
+    100042: //RootNode
     100044: mixamorig:Head
     100046: mixamorig:HeadTop_End
     100048: mixamorig:Hips
@@ -50,29 +50,28 @@ ModelImporter:
     100088: mixamorig:Spine
     100090: mixamorig:Spine1
     100092: mixamorig:Spine2
-    100094: //RootNode
     400000: Box002
     400002: Box003
     400004: Box004
     400006: Box005
-    400008: Box006
-    400010: Box007
-    400012: Box008
-    400014: Box009
-    400016: Box010
-    400018: Box011
-    400020: Box012
-    400022: Box013
-    400024: Box014
-    400026: Box015
-    400028: Box016
-    400030: Box017
-    400032: Box018
-    400034: Box019
-    400036: Box020
-    400038: Cylinder001
-    400040: Cylinder002
-    400042: Cylinder003
+    400008: Box007
+    400010: Box008
+    400012: Box009
+    400014: Box010
+    400016: Box011
+    400018: Box012
+    400020: Box013
+    400022: Box014
+    400024: Box015
+    400026: Box016
+    400028: Box017
+    400030: Box018
+    400032: Box019
+    400034: Box020
+    400036: Cylinder001
+    400038: Cylinder002
+    400040: Cylinder003
+    400042: //RootNode
     400044: mixamorig:Head
     400046: mixamorig:HeadTop_End
     400048: mixamorig:Hips
@@ -98,7 +97,6 @@ ModelImporter:
     400088: mixamorig:Spine
     400090: mixamorig:Spine1
     400092: mixamorig:Spine2
-    400094: //RootNode
     2100000: glasses
     2100002: grey hair
     2100004: ele4e
@@ -112,46 +110,44 @@ ModelImporter:
     4300006: Box003
     4300008: Box004
     4300010: Box005
-    4300012: Box006
-    4300014: Box007
-    4300016: Box008
-    4300018: Box009
-    4300020: Box010
-    4300022: Box011
-    4300024: Box012
-    4300026: Box013
-    4300028: Box014
-    4300030: Box015
-    4300032: Box016
-    4300034: Box017
-    4300036: Box018
-    4300038: Box019
-    4300040: Box020
-    4300042: Cylinder003
-    7400000: mixamo.com
+    4300012: Box007
+    4300014: Box008
+    4300016: Box009
+    4300018: Box010
+    4300020: Box011
+    4300022: Box012
+    4300024: Box013
+    4300026: Box014
+    4300028: Box015
+    4300030: Box016
+    4300032: Box017
+    4300034: Box018
+    4300036: Box019
+    4300038: Box020
+    4300040: Cylinder003
+    7400000: Take 001
     9500000: //RootNode
     13700000: Box002
     13700002: Box003
     13700004: Box004
     13700006: Box005
-    13700008: Box006
-    13700010: Box007
-    13700012: Box008
-    13700014: Box009
-    13700016: Box010
-    13700018: Box011
-    13700020: Box012
-    13700022: Box013
-    13700024: Box014
-    13700026: Box015
-    13700028: Box016
-    13700030: Box017
-    13700032: Box018
-    13700034: Box019
-    13700036: Box020
-    13700038: Cylinder001
-    13700040: Cylinder002
-    13700042: Cylinder003
+    13700008: Box007
+    13700010: Box008
+    13700012: Box009
+    13700014: Box010
+    13700016: Box011
+    13700018: Box012
+    13700020: Box013
+    13700022: Box014
+    13700024: Box015
+    13700026: Box016
+    13700028: Box017
+    13700030: Box018
+    13700032: Box019
+    13700034: Box020
+    13700036: Cylinder001
+    13700038: Cylinder002
+    13700040: Cylinder003
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -181,10 +177,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
-      takeName: mixamo.com
+      name: Take 001
+      takeName: Take 001
       firstFrame: 0
-      lastFrame: 31
+      lastFrame: 167
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
