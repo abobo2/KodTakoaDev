@@ -10,14 +10,54 @@ public class CameraFollow : MonoBehaviour
     public float distance;
     Vector3 offset;
 
-    // Use this for initialization
-    void Start()
+    private float minZoom = 10;
+    private float maxZoom = 20;
+
+    private float zoomMultiplier = 20;
+    private Camera mainCamera;
+    private Coroutine zoomCoroutine;
+    
+    private void Start()
     {
+        mainCamera = Camera.main;
         offset = transform.position - target.position;
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") != 0)
+        {
+            if (mainCamera.orthographicSize - (Input.GetAxis("Mouse ScrollWheel") * zoomMultiplier) > maxZoom ||
+                mainCamera.orthographicSize - (Input.GetAxis("Mouse ScrollWheel") * zoomMultiplier) < minZoom)
+            {
+                return;
+            }
+
+            if (zoomCoroutine != null)
+            {
+                StopCoroutine(zoomCoroutine);
+            }
+
+            zoomCoroutine = StartCoroutine(ZoomCamera(mainCamera.orthographicSize, mainCamera.orthographicSize - (Input.GetAxis("Mouse ScrollWheel") * zoomMultiplier)));
+        }
+    }
+
+    private IEnumerator ZoomCamera(float startZoom, float destinationZoom, float time = 0.2f)
+    {
+        float currentTime = 0f;
+
+        while (currentTime < time)
+        {
+            mainCamera.orthographicSize = Mathf.Lerp(startZoom, destinationZoom, currentTime / time);
+            currentTime += Time.deltaTime;
+
+            yield return new WaitForEndOfFrame();
+        }
+
+        zoomCoroutine = null;
+    }
+
+    private void FixedUpdate()
     {
         Ray r = new Ray(target.position, -transform.forward);
         Vector3 finalPos = r.GetPoint(distance) + transform.TransformVector(Screenshake.ScreenshakeVector);
