@@ -26,7 +26,7 @@ public class WordMiniGame : MonoBehaviour
     private Action onComplete;
     private Action onWrongInput;
 
-    public float ErrorDelay = .75f;
+    public float ErrorDelay = .40f;
 
     private bool hasErrored;
     
@@ -42,7 +42,7 @@ public class WordMiniGame : MonoBehaviour
         "Add a touch of love",
         "Add a lot of butter",
         "Take their bread away",
-        "Add white powder to the lyutenica",
+        "Add white to the lyutenica",
         "Bake some cake",
         "Make some kozunak",
         "This is a piece of cake",
@@ -61,12 +61,12 @@ public class WordMiniGame : MonoBehaviour
         "Where is my husband?",
         "Home sweet home",
         "Those cookies were lit",
-        "Towels can’t tell jokes. They have a dry sense of humor",
-        "How does Moses make coffee? Hebrews it",
+        "Towels can't tell jokes.",
+        "Make coffee",
         "Sausage puns are the wurst",
-        "Want to hear a pizza joke? Nevermind, it’s too cheesy",
-        "Why should you never trust a train? They have loco motives",
-        "To write with a broken pencil is pointless",
+        "Want to hear a pizza joke? ",
+        "Praise the sun",
+        "Do she me who you",
     };
 
     public void StartMinigame(Action onComplete, Action onWrongInput){
