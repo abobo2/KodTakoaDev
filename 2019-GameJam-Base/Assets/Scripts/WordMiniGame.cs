@@ -61,10 +61,10 @@ public class WordMiniGame : MonoBehaviour
         "Where is my husband?",
         "Home sweet home",
         "Those cookies were lit",
-        "Towels can't tell jokes.",
+        "Towels can't tell jokes",
         "Make coffee",
         "Sausage puns are the wurst",
-        "Want to hear a pizza joke? ",
+        "Want to hear a pizza joke?",
         "Praise the sun",
         "Do she me who you",
     };
