@@ -68,6 +68,7 @@ public class GuiManager : MonoBehaviour, IInitiatable
 
     private void OnLevelFailed(Level lvl)
     {
+        txtAnimatedLevel.color = Color.red;
         txtAnimatedLevel.text = "Level Failed";
 
         newLevelTextAnimator.gameObject.SetActive(true);
