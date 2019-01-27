@@ -8,6 +8,6 @@ public class DisableAnimator : MonoBehaviour
 
     public void AnimatorDisable()
     {
-        animator.enabled = false;
+        //animator.enabled = false;
     }
 }
