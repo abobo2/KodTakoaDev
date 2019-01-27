@@ -13,6 +13,8 @@ namespace Assets.Scripts
     {
         private static Queue<Vector2> screenSheks = new Queue<Vector2>();
 
+        private static bool isRunning;
+
         public static void RequestScreenshake(float magnitude, float frameDuration)
         {
             float dir = Random.Range(0, 1f) * Mathf.PI * 2;
@@ -22,7 +24,11 @@ namespace Assets.Scripts
                 screenSheks.Enqueue(v);
             }
             screenSheks.Enqueue(Vector2.zero);
-            ChangeScreenshakeVector();
+            if (!isRunning)
+            {
+                isRunning = true;
+                ChangeScreenshakeVector();
+            }
         }
 
         private static void ChangeScreenshakeVector()
@@ -35,6 +41,10 @@ namespace Assets.Scripts
                 {
                     ChangeScreenshakeVector();
                 });
+            }
+            else
+            {
+                isRunning = false;
             }
         }
 
