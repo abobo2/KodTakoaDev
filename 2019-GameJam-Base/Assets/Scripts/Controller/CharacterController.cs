@@ -27,6 +27,8 @@ public class CharacterController : MonoBehaviour, IInitiatable
     private GameState gameState; 
     private GameEventsManager gameEventsManager; 
 
+    public Vector3 unstruckPos;
+
     public void Initiate()
     {
         gameState = ServiceLocator.instance.GetInstanceOfType<GameState>();
@@ -39,6 +41,7 @@ public class CharacterController : MonoBehaviour, IInitiatable
     // Start is called before the first frame update
     void Start()
     {
+        unstruckPos = transform.position;
 		Interactables = new List<InteractableController>();
     }
 
@@ -47,6 +50,15 @@ public class CharacterController : MonoBehaviour, IInitiatable
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.F5))
+        {
+            transform.position = unstruckPos;
+        }
+        if (Input.GetKey(KeyCode.F6))
+        {
+            transform.position = new Vector3(transform.position.x, 10, transform.position.y);
+        }
+        transform.position = new Vector3(transform.position.x, unstruckPos.y, transform.position.z);
         GetInput();
         Rotate();
 		Move();
@@ -190,7 +202,7 @@ public class CharacterController : MonoBehaviour, IInitiatable
         {
             animator.SetBool("isWalking", true);
 
-            transform.GetComponent<Rigidbody>().velocity = transform.forward * gameState.playerSpeed.Value * playerInput.magnitude;
+            transform.GetComponent<Rigidbody>().AddForce(transform.forward * gameState.playerSpeed.Value * playerInput.magnitude * 10);
         }
         else
         {

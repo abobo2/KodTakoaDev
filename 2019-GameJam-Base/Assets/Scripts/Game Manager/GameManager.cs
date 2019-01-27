@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using System.Linq;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
 {
@@ -18,6 +21,10 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
     private int currentTaskClusterIndex;
 
     private List<LevelTask> currentTasksToDo;
+
+    public TextMeshPro restartText;
+
+    public GameObject restartContainer;
 
     private Coroutine timerCoroutine;
 
@@ -161,11 +168,34 @@ public class GameManager : MonoBehaviour, IInitiatable, ILateInitiatable
         LevelFailed();
     }
 
+        private IDisposable restartRoutine;
     private void LevelFailed()
     {
         isGameRunning = false;
         gameEventsManager.InvokeLevelFailed(levels[currentLevelIndex]);
+        float seconds = 5f;
+        restartRoutine = Observable.Interval(TimeSpan.FromSeconds(1)).Subscribe(sec =>
+        {
+            seconds -= 1f;
+            WaitRestart(seconds);
+        });
         Debug.Log("Level failed !");
+    }
+
+    private void WaitRestart(float timeLeft)
+    {
+//        restartContainer.gameObject.SetActive(true);
+//        restartText.text = "Restarting in " + timeLeft;
+        if (timeLeft >= 0.5f)
+        {
+            Debug.Log("Restart");
+            SceneManager.LoadScene(0);
+        }
+
+        if (restartRoutine != null)
+        {
+            restartRoutine.Dispose();
+        }
     }
 
     private void LevelComplete()
