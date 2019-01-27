@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UniRx;
 
 public class CharacterController : MonoBehaviour, IInitiatable
 {
@@ -24,10 +25,15 @@ public class CharacterController : MonoBehaviour, IInitiatable
 	private InteractableController closestInteractable;
 
     private GameState gameState; 
+    private GameEventsManager gameEventsManager; 
 
     public void Initiate()
     {
         gameState = ServiceLocator.instance.GetInstanceOfType<GameState>();
+        gameEventsManager = ServiceLocator.instance.GetInstanceOfType<GameEventsManager>();
+
+        gameEventsManager.ObserveLevelFailed().Subscribe(_ => animator.SetTrigger("lose"));
+       // gameEventsManager.ObserveLevelTaskCompleted().Subscribe(_ => animator.SetTrigger("win"));
     }
 
     // Start is called before the first frame update
