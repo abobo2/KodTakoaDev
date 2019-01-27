@@ -31,7 +31,7 @@ public class WordMiniGame : MonoBehaviour
     private bool hasErrored;
     
 
-    private char currentTargetCharacter => currentPhrase.Substring(currentIndex)[0];
+    private char currentTargetCharacter => currentPhrase.Substring(currentIndex).ToLower()[0];
     private int currentIndex;
 
 
@@ -81,9 +81,13 @@ public class WordMiniGame : MonoBehaviour
 
         if (Input.anyKeyDown)
         {
+            if (string.IsNullOrEmpty(Input.inputString))
+            {
+                return;
+            }
+            
             char keyDown = Input.inputString.ToLower()[0];
-
-
+            
             Debug.Log("Current Target Character is " + currentTargetCharacter);
             Debug.Log("KeyDown is " + keyDown);
             if (keyDown == currentTargetCharacter)
