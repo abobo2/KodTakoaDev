@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 0.2, y: -0.7525}
+  m_SizeDelta: {x: 10.11, y: -1.505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5278568638803074529
 CanvasRenderer:
@@ -108,8 +108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 5.03, y: 1.25}
+  m_SizeDelta: {x: 58.11, y: 12.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2158602682085893044
 CanvasRenderer:
@@ -182,8 +182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 32, y: 38}
+  m_AnchoredPosition: {x: -46, y: -10}
+  m_SizeDelta: {x: 48, y: 57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4473806726887659360
 CanvasRenderer:
@@ -213,7 +213,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 23639a9b10139f24fae79f4f4d51c04b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d58e64ca9a28ce343a585b22d1c64fbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -257,7 +257,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 70, y: -10}
-  m_SizeDelta: {x: 190, y: 40}
+  m_SizeDelta: {x: 285, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8043590652986575268
 CanvasRenderer:
@@ -418,6 +418,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -10, y: 0}
+  m_AnchoredPosition: {x: 7.5525, y: 2.12}
+  m_SizeDelta: {x: 53.065, y: 14.29}
   m_Pivot: {x: 0.5, y: 0.5}
