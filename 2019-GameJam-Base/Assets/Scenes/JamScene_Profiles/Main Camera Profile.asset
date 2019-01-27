@@ -229,7 +229,7 @@ MonoBehaviour:
     value: 0
   toneCurveGamma:
     overrideState: 0
-    value: 1
+    value: 0.33
   ldrLut:
     overrideState: 0
     value: {fileID: 0}
@@ -239,10 +239,10 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 38
+    value: 23.7
   tint:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 100
   colorFilter:
     overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
