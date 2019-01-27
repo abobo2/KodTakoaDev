@@ -1866,31 +1866,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6715628
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: RequiresMiniGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionCooldown
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899794, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -1937,6 +1912,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: RequiresMiniGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionCooldown
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
@@ -4615,31 +4615,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6715623
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionType
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: RequiresMiniGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionCooldown
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899794, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -4702,6 +4677,41 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionType
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: RequiresMiniGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 602334657}
+    - target: {fileID: 5331278105400730368, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.518
+      objectReference: {fileID: 0}
     - target: {fileID: 5331278105903380561, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_Size.x
@@ -4717,16 +4727,6 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 1.3
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105400730368, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.518
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 602334657}
     m_RemovedComponents:
     - {fileID: 5331278105903380574, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
@@ -6426,31 +6426,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6933824
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: RequiresMiniGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionCooldown
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899794, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -6498,11 +6473,36 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380561, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
-      propertyPath: m_Size.z
-      value: 2
+      propertyPath: m_IsKinematic
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: RequiresMiniGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 867642669}
     - target: {fileID: 5331278105400730368, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -6513,11 +6513,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.076
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+    - target: {fileID: 5331278105903380561, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 867642669}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5331278105903380574, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
@@ -6609,31 +6609,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionType
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: RequiresMiniGame
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionCooldown
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899794, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -6681,6 +6656,36 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: RequiresMiniGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionCooldown
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 345929517}
     - target: {fileID: 5331278105903380561, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_Size.z
@@ -6691,11 +6696,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 345929517}
     m_RemovedComponents:
     - {fileID: 5331278105903380574, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
@@ -8504,18 +8504,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5833160158965801, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5833160158965798, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
-      propertyPath: m_Radius
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5833160158965798, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
-      propertyPath: m_Height
-      value: 1.82
-      objectReference: {fileID: 0}
     - target: {fileID: 5833160158965802, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: MoveSpeed
       value: 0.3
@@ -8543,6 +8531,18 @@ PrefabInstance:
     - target: {fileID: 5833160158965805, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833160158965801, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833160158965798, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
+      propertyPath: m_Radius
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833160158965798, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
+      propertyPath: m_Height
+      value: 1.82
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab029e0595a4b9f4a9980617dffc9ac7, type: 3}
@@ -15975,6 +15975,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3948449307670321712, guid: 9c40b0ebd344e2647851139dd49af0fa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948449307670321712, guid: 9c40b0ebd344e2647851139dd49af0fa,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -190
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c40b0ebd344e2647851139dd49af0fa, type: 3}
 --- !u!114 &2106609894 stripped
@@ -16515,41 +16525,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.08
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: interactionSound
-      value: 
-      objectReference: {fileID: 130654087}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: interactionParticles
-      value: 
-      objectReference: {fileID: 556250884}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: RequiresMiniGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionTime
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: InteractionCooldown
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 5331278105231899794, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -16607,6 +16582,46 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380560, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: interactionSound
+      value: 
+      objectReference: {fileID: 130654087}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: interactionParticles
+      value: 
+      objectReference: {fileID: 556250884}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: RequiresMiniGame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105903380562, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: InteractionCooldown
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1428616087}
     - target: {fileID: 5331278105903380561, guid: 310ed3df448d94847aa9fd89ca2f57bb,
         type: 3}
       propertyPath: m_Size.x
@@ -16622,10 +16637,5 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5331278105231899795, guid: 310ed3df448d94847aa9fd89ca2f57bb,
-        type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 1428616087}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 310ed3df448d94847aa9fd89ca2f57bb, type: 3}
