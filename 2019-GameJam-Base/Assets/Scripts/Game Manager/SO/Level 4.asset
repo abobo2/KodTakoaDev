@@ -13,21 +13,23 @@ MonoBehaviour:
   m_Name: Level 4
   m_EditorClassIdentifier: 
   level: 4
-  time: 35
+  time: 70
   taskClusters:
   - tasks:
     - conditionMessage: Ben 10
       interactionToBeDone: 2
   - tasks:
-    - conditionMessage: 
-      interactionToBeDone: 0
+    - conditionMessage: Spanak Baniza
+      interactionToBeDone: 3
   - tasks:
-    - conditionMessage: 
-      interactionToBeDone: 0
+    - conditionMessage: Lozovi Sarmi
+      interactionToBeDone: 4
   - tasks:
-    - conditionMessage: 
-      interactionToBeDone: 0
+    - conditionMessage: Rakia
+      interactionToBeDone: 5
   - tasks:
-    - conditionMessage: 
-      interactionToBeDone: 0
-  - tasks: []
+    - conditionMessage: Ajvar
+      interactionToBeDone: 5
+  - tasks:
+    - conditionMessage: Cook Kiufteta
+      interactionToBeDone: 1

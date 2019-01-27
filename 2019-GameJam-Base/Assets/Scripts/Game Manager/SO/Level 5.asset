@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level 5
   m_EditorClassIdentifier: 
   level: 5
-  time: 40
+  time: 60
   taskClusters:
   - tasks:
     - conditionMessage: Baniza
@@ -22,8 +22,8 @@ MonoBehaviour:
     - conditionMessage: Sexy time
       interactionToBeDone: 2
   - tasks:
-    - conditionMessage: Cheese Baniza
-      interactionToBeDone: 3
+    - conditionMessage: Pod Prikritie
+      interactionToBeDone: 2
   - tasks:
     - conditionMessage: Cabbage Sarmi
       interactionToBeDone: 4

@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08254500d1cb642b620240e13d47d4, type: 3}
   m_Name: Level 7
   m_EditorClassIdentifier: 
-  level: 0
-  time: 0
-  taskClusters: []
+  level: 7
+  time: 25
+  taskClusters:
+  - tasks:
+    - conditionMessage: Lyutivka
+      interactionToBeDone: 5
+  - tasks:
+    - conditionMessage: No-Rice-Sarmi
+      interactionToBeDone: 4
+  - tasks:
+    - conditionMessage: Rakia 99% Alc
+      interactionToBeDone: 5

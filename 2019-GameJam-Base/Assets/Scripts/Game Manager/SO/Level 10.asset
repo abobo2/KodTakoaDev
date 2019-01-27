@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Level 10
   m_EditorClassIdentifier: 
   level: 0
-  time: 0
-  taskClusters: []
+  time: 10
+  taskClusters:
+  - tasks:
+    - conditionMessage: Chicken Dinner
+      interactionToBeDone: 2
